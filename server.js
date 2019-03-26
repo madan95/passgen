@@ -1,4 +1,4 @@
-'use strict';
+/*'use strict';
 
 const express = require('express');
 
@@ -24,3 +24,18 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, HOST);
 console.log('Running');
+*/
+var express = require('express')
+var cors = require('cors')
+var app = express()
+
+app.use(cors())
+
+app.get('/', function(req, res, next) {
+res.json({msg: 'this is enabled'})
+})
+
+app.listen(8080, function() {
+console.log('listing to oport 8081')
+})
+
